@@ -158,10 +158,7 @@ let w=a.width;
 let h=a.height;
 let mapw=40*2;
 let maph=(32 * 3)+6;
-let ctx=a.getContext('2d', { alpha: !1 });
-ctx.imageSmoothingEnabled=false;
-ctx.mozImageSmoothingEnabled=false;
-ctx.msImageSmoothingEnabled=false;
+let ctx=a.getContext('2d');
 let camera=new Cam(ctx);
 let players = [];
 let gravity=0.2;
@@ -1012,6 +1009,11 @@ function lc(fn,amt=0) {
 }
 
 function init(){
+
+  ctx.msImageSmoothingEnabled = false;
+  ctx.mozImageSmoothingEnabled = false;
+  ctx.webkitImageSmoothingEnabled = false;
+  ctx.imageSmoothingEnabled = false;
 
   switch(screen) {
     case 0: {

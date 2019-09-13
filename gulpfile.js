@@ -62,9 +62,23 @@ gulp.task('build_source', function() {
     .pipe(concat('build.js'))
     .pipe(gulpif(prod, terser({
       mangle: {
-        toplevel: true,
-        properties: true
-      }
+        toplevel: false,
+        properties: {
+          reserved: [
+            "imageSmoothingEnabled"
+          ]
+        }
+      },
+      compress: {
+        hoist_funs: false,
+        hoist_props: false,
+        hoist_vars: false,
+        evaluate: false,
+        negate_iife: false,
+        unused: false,
+        passes: 4
+      },
+      nameCache: {}
     })))
     .pipe(gulp.dest('build'));
 });
@@ -95,14 +109,15 @@ gulp.task('clean', function() {
 
 gulp.task('lint', function() {
   return gulp.src(['*.js', 'src/**/*.js'])
+  /*
     .pipe(eslint({
       rules: {
-        'no-unused-expressions': 1,
-        'no-unused-vars': 1,
-        'no-var': 1
+        'no-unused-expressions': 0,
+        'no-unused-vars': 0,
+        'no-var': 0
       }
     }))
-    .pipe(eslint.format());
+    .pipe(eslint.format());*/
 });
 
 //compress all images
