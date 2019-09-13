@@ -1907,7 +1907,7 @@ function draw(ctx){
       message[0] = "CRYSTAL BLAST";
       message[1] = "";
       message[2] = "You're stranded!";
-      message[3] = "Collect nine energy crystals to get back.";
+      message[3] = "Collect nine energy crystals to get back to orbit.";
       message[4] = "Z=Jump; X=Dash/Shoot; Left/Right Arrow=Move and Drill; Drill Down=Down Arrow; Ladders=Up Arrow";
 
       baseY = 64;
