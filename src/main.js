@@ -1656,7 +1656,7 @@ function ud(){
         }
 
         if (tl.i == spcship) {
-          if (player.ecrystal >= 1) {
+          if (player.ecrystal >= 9) {
             if (distance(
               player.x,
               player.y,
