@@ -153,6 +153,7 @@
   
 }).call(this);
 
+let a = document.getElementById("a");
 let w=a.width;
 let h=a.height;
 let mapw=40*2;
