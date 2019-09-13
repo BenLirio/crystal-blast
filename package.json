@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "crystal-blast",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "My entry for js13kGames 2019.",
   "author": "Jared York <jared.york@yorkcs.com>",
   "repository": "jaredyork/crystal-blast",
